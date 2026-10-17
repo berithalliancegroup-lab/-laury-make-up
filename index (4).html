@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#800020">
+  <meta name="description" content="LAURY MAKE-UP : institut de beauté, maquillage professionnel, soins et formations à N'Djamena, quartier Moursal.">
+  <title>LAURY MAKE-UP | Beauté & Formation</title>
+
+  <style>
+    :root {
+      --bordeaux: #800020;
+      --bordeaux-fonce: #4b1022;
+      --or: #d4af65;
+      --ivoire: #fffaf3;
+      --texte: #30252a;
+      --blanc: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--ivoire);
+      color: var(--texte);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--blanc);
+      padding: 18px 5%;
+      text-align: center;
+      border-bottom: 3px solid var(--or);
+    }
+
+    header h1 {
+      color: var(--bordeaux);
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .slogan {
+      margin: 4px 0 14px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 22px;
+    }
+
+    nav a {
+      color: var(--bordeaux);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #a7772f;
+    }
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        var(--bordeaux-fonce),
+        var(--bordeaux)
+      );
+      color: var(--blanc);
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .hero h2 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 26px;
+    }
+
+    .bouton {
+      display: inline-block;
+      background: var(--or);
+      color: #30151c;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .bouton-secondaire {
+      display: inline-block;
+      color: white;
+      border: 1px solid var(--or);
+      padding: 11px 21px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .bouton:hover,
+    .bouton-secondaire:hover {
+      opacity: 0.88;
+    }
+
+    section {
+      padding: 55px 20px;
+      scroll-margin-top: 20px;
+    }
+
+    .conteneur {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .titre-section {
+      color: var(--bordeaux);
+      text-align: center;
+      font-size: 29px;
+      margin: 0 0 12px;
+    }
+
+    .intro-section {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 30px;
+    }
+
+    .cartes {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 22px;
+    }
+
+    .carte {
+      background: var(--blanc);
+      border: 1px solid #eadcc9;
+      border-radius: 12px;
+      padding: 25px 22px;
+      text-align: center;
+      box-shadow: 0 4px 14px #4b10220a;
+    }
+
+    .icone {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .carte h3 {
+      color: var(--bordeaux);
+      margin: 8px 0;
+    }
+
+    .carte p {
+      margin-bottom: 20px;
+    }
+
+    .section-coloree {
+      background: #f4e7e8;
+    }
+
+    .engagement {
+      background: var(--bordeaux);
+      color: white;
+      text-align: center;
+    }
+
+    .engagement h2 {
+      color: var(--or);
+    }
+
+    .engagement p {
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border: 1px solid #eadcc9;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--bordeaux-fonce);
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer strong {
+      color: var(--or);
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 12px;
+      }
+
+      nav {
+        gap: 10px 14px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      section {
+        padding: 42px 16px;
+      }
+
+      .titre-section {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>LAURY MAKE-UP</h1>
+    <p class="slogan">Institut de beauté & formation professionnelle</p>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="#prestations">Prestations</a>
+      <a href="formations.html">Formations</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <p class="eyebrow">Beauté • Confiance • Excellence</p>
+        <h2>Révélez votre beauté</h2>
+        <p>
+          Le maquillage professionnel, les soins de beauté
+          et la transmission du savoir-faire au service
+          de votre confiance et de votre épanouissement.
+        </p>
+
+        <a class="bouton" href="#prestations">
+          Découvrir nos services
+        </a>
+
+        <a class="bouton-secondaire" href="boutique.html">
+          Visiter la boutique
+        </a>
+      </div>
+    </section>
+
+    <section id="prestations">
+      <div class="conteneur">
+        <h2 class="titre-section">Nos prestations</h2>
+        <p class="intro-section">
+          Découvrez nos services dédiés à la beauté,
+          à la mise en valeur et au bien-être.
+        </p>
+
+        <div class="cartes">
+          <article class="carte">
+            <div class="icone">💄</div>
+            <h3>Maquillage professionnel</h3>
+            <p>
+              Des prestations adaptées aux cérémonies,
+              aux événements et aux occasions spéciales.
+            </p>
+            <a class="bouton"
+               href="https://wa.me/23563011342?text=Bonjour%20Laury%20Make-Up%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations%20de%20maquillage.">
+              Demander un renseignement
+            </a>
+          </article>
+
+          <article class="carte">
+            <div class="icone">✨</div>
+            <h3>Conseils beauté</h3>
+            <p>
+              Des conseils pour choisir les produits
+              et les gestes adaptés à votre routine beauté.
+            </p>
+            <a class="bouton" href="boutique.html">
+              Voir les produits
+            </a>
+          </article>
+
+          <article class="carte">
+            <div class="icone">🎓</div>
+            <h3>Formation professionnelle</h3>
+            <p>
+              Développez vos compétences et découvrez
+              nos formations dans le domaine de la beauté.
+            </p>
+            <a class="bouton" href="formations.html">
+              Découvrir les formations
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-coloree" id="formations">
+      <div class="conteneur">
+        <h2 class="titre-section">Formez-vous aux métiers de la beauté</h2>
+        <p class="intro-section">
+          Apprenez, pratiquez et développez votre savoir-faire
+          grâce à nos formations. Consultez les programmes
+          et envoyez votre demande de réservation.
+        </p>
+
+        <div style="text-align:center">
+          <a class="bouton" href="formations.html">
+            Voir toutes les formations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecommerce">
+      <div class="conteneur">
+        <h2 class="titre-section">Notre boutique beauté</h2>
+        <p class="intro-section">
+          Explorez notre espace boutique et découvrez
+          les catégories de produits de maquillage,
+          de soins du visage, du corps et des cheveux.
+        </p>
+
+        <div class="cartes">
+          <article class="carte">
+            <div class="icone">💋</div>
+            <h3>Maquillage</h3>
+            <p>Des produits pour sublimer votre beauté.</p>
+          </article>
+
+          <article class="carte">
+            <div class="icone">🧴</div>
+            <h3>Soins du visage</h3>
+            <p>Des produits pour compléter votre routine.</p>
+          </article>
+
+          <article class="carte">
+            <div class="icone">🌸</div>
+            <h3>Corps et cheveux</h3>
+            <p>Découvrez les catégories de notre boutique.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:25px">
+          <a class="bouton" href="boutique.html">
+            Accéder à la boutique
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="engagement">
+      <div class="conteneur">
+        <h2 class="titre-section" style="color:#d4af65">
+          Notre engagement
+        </h2>
+        <p>
+          Chez LAURY MAKE-UP, nous souhaitons mettre la beauté,
+          l'apprentissage et le savoir-faire au service
+          de la confiance en soi et du développement professionnel.
+        </p>
+        <a class="bouton" href="formations.html">
+          Découvrir nos formations
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="conteneur">
+        <h2 class="titre-section">Contactez LAURY MAKE-UP</h2>
+        <p class="intro-section">
+          Pour toute question sur nos prestations, nos produits
+          ou nos formations, contactez notre équipe.
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Adresse :</strong> N'Djamena, quartier Moursal</p>
+          <p><strong>Téléphone :</strong> +235 63 01 13 42</p>
+          <a class="bouton"
+             href="https://wa.me/23563011342?text=Bonjour%20Laury%20Make-Up%2C%20je%20souhaite%20obtenir%20des%20informations.">
+            Nous contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>LAURY MAKE-UP</strong></p>
+    <p>Beauté, confiance et savoir-faire.</p>
+    <p>N'Djamena, quartier Moursal</p>
+    <p>© <span id="annee"></span> LAURY MAKE-UP — Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById("annee").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
