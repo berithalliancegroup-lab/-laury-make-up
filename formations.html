@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#800020">
+  <title>Formations beauté | LAURY MAKE-UP</title>
+  <style>
+    :root {
+      --bordeaux: #800020;
+      --or: #d4af65;
+      --creme: #fff8f5;
+      --texte: #30242a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--creme);
+      color: var(--texte);
+      line-height: 1.7;
+    }
+    header {
+      background: var(--bordeaux);
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0; }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 14px;
+      background: white;
+    }
+    nav a {
+      color: var(--bordeaux);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 28px 16px;
+    }
+    .intro {
+      text-align: center;
+      padding: 24px 0;
+    }
+    .intro h2 { color: var(--bordeaux); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      border: 1px solid #ead9dd;
+      box-shadow: 0 4px 14px #80002012;
+    }
+    .card h3 { color: var(--bordeaux); }
+    .button {
+      display: inline-block;
+      background: var(--bordeaux);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .note {
+      margin-top: 26px;
+      padding: 18px;
+      background: white;
+      border-left: 4px solid var(--or);
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 22px;
+      text-align: center;
+      background: var(--bordeaux);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LAURY MAKE-UP</h1>
+    <p>Institut de beauté, maquillage et formation</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="boutique.html">Boutique</a>
+    <a href="formations.html">Formations</a>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <h2>Nos formations beauté</h2>
+      <p>
+        Développez vos compétences et découvrez les techniques
+        de beauté et de maquillage avec LAURY MAKE-UP.
+      </p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Maquillage professionnel</h3>
+        <p>
+          Découvrez les bases du maquillage, le choix des produits,
+          la préparation de la peau et les techniques d'application.
+        </p>
+        <a class="button"
+           href="https://wa.me/?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20maquillage.">
+          Demander des informations
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Soins du visage</h3>
+        <p>
+          Découvrez les principes de préparation de la peau,
+          les routines de soins et l'utilisation des produits adaptés.
+        </p>
+        <a class="button"
+           href="https://wa.me/?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20soins%20du%20visage.">
+          Demander des informations
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Beauté et entrepreneuriat</h3>
+        <p>
+          Apprenez à présenter vos prestations, organiser votre
+          activité et accueillir vos clientes avec professionnalisme.
+        </p>
+        <a class="button"
+           href="https://wa.me/?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20entrepreneuriat%20beaute.">
+          Demander des informations
+        </a>
+      </article>
+    </section>
+
+    <section class="note">
+      <strong>Renseignements et inscriptions</strong>
+      <p>
+        Contactez LAURY MAKE-UP pour connaître les programmes,
+        les tarifs, les dates et les modalités des formations.
+      </p>
+      <p>
+        Les formations présentées sont des offres à confirmer
+        par l'institut avant toute inscription.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© LAURY MAKE-UP — Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
