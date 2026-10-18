@@ -4,43 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez les formations beauté de LAURY MAKE-UP : maquillage professionnel, soins du visage et entrepreneuriat beauté.">
+  <meta name="description" content="Découvrez les formations professionnelles en maquillage, soins du visage, beauté du regard, onglerie et entrepreneuriat proposées par LAURY MAKE-UP.">
   <title>Formations professionnelles | LAURY MAKE-UP</title>
 
   <style>
     :root {
       --wine: #781d3b;
-      --wine-dark: #4c1025;
-      --gold: #d9b46a;
-      --gold-light: #f8e7bf;
-      --cream: #fffaf7;
-      --pink: #f8e8ed;
+      --wine-dark: #4b1025;
+      --gold: #d9b56d;
+      --cream: #fffaf5;
       --white: #ffffff;
-      --text: #30232a;
-      --muted: #74666c;
-      --border: #ead9df;
-      --green: #167447;
+      --text: #332b2e;
+      --muted: #70666a;
+      --border: #eee2e5;
+      --shadow: 0 10px 30px rgba(75, 16, 37, 0.09);
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 20px;
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
       background: var(--cream);
+      color: var(--text);
       line-height: 1.7;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
     button,
@@ -50,385 +49,386 @@
       font: inherit;
     }
 
-    .top-line {
-      height: 5px;
-      background: var(--gold);
+    .topbar {
+      background: var(--wine-dark);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
     }
 
     header {
-      background: var(--white);
+      background: white;
+      border-bottom: 3px solid var(--gold);
+      padding: 23px 18px 17px;
       text-align: center;
-      padding: 25px 16px 18px;
-      border-bottom: 1px solid var(--border);
     }
 
     .brand {
       color: var(--wine);
-      font-size: clamp(26px, 4vw, 38px);
-      letter-spacing: 2px;
+      font-size: clamp(25px, 4vw, 38px);
       font-weight: 800;
-      margin: 0;
+      letter-spacing: 2px;
     }
 
-    .brand-subtitle {
+    .tagline {
       color: var(--muted);
-      margin: 4px 0 18px;
+      margin-top: 3px;
     }
 
     nav {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 10px 25px;
+      justify-content: center;
+      gap: 10px 27px;
+      margin-top: 17px;
     }
 
     nav a {
-      text-decoration: none;
-      font-weight: bold;
       color: var(--wine);
+      font-size: 14px;
+      font-weight: 700;
       padding: 5px 0;
     }
 
-    nav a:hover,
-    nav a[aria-current="page"] {
-      color: #a16b2f;
+    nav a:hover {
+      color: #a56b30;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse at 85% 20%, rgba(217,180,106,.24), transparent 32%),
-        linear-gradient(135deg, var(--wine-dark), var(--wine) 65%, #8f294a);
-      color: var(--white);
-      padding: 76px 20px 82px;
+      background: linear-gradient(135deg, #4b1025, #781d3b 60%, #9b3852);
+      color: white;
       text-align: center;
-    }
-
-    .hero-inner {
-      width: min(900px, 100%);
-      margin: auto;
-      position: relative;
-      z-index: 1;
+      padding: 72px 20px 76px;
     }
 
     .eyebrow {
-      color: var(--gold-light);
+      color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: bold;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      font-size: clamp(34px, 6vw, 57px);
-      line-height: 1.15;
-      margin: 18px 0;
+      font-size: clamp(30px, 5vw, 49px);
+      line-height: 1.2;
+      margin-bottom: 19px;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 25px;
-      color: #fff1f4;
-      font-size: 18px;
+      color: #fff0f2;
+      font-size: 17px;
     }
 
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      text-align: center;
-      text-decoration: none;
-      border: 1px solid transparent;
+    .btn {
+      display: inline-block;
+      border: 0;
       border-radius: 8px;
-      padding: 12px 20px;
-      font-weight: bold;
+      padding: 12px 19px;
+      background: var(--wine);
+      color: white;
+      font-weight: 700;
       cursor: pointer;
-      transition: transform .2s, opacity .2s;
+      text-align: center;
+      transition: transform 0.2s, background 0.2s;
     }
 
-    .button:hover {
+    .btn:hover {
+      background: var(--wine-dark);
       transform: translateY(-2px);
-      opacity: .92;
     }
 
-    .button-gold {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    .btn-gold {
+      background: var(--gold);
       color: var(--wine-dark);
     }
 
-    .button-outline {
-      border-color: var(--gold);
-      color: white;
+    .btn-gold:hover {
+      background: #e9cc91;
+      color: var(--wine-dark);
+    }
+
+    .btn-outline {
       background: transparent;
-    }
-
-    .button-wine {
-      background: var(--wine);
+      border: 1px solid var(--gold);
       color: white;
+      margin-left: 8px;
     }
 
-    .button-green {
-      background: var(--green);
-      color: white;
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
     }
 
-    main {
-      width: min(1120px, 92%);
+    .section {
+      max-width: 1180px;
       margin: auto;
-    }
-
-    section.content-section {
-      padding: 55px 0;
+      padding: 58px 22px;
     }
 
     .section-heading {
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 30px;
+      margin-bottom: 34px;
     }
 
     .section-heading .eyebrow {
-      color: #9a6c31;
-      letter-spacing: 2px;
+      color: var(--wine);
+      margin-bottom: 7px;
     }
 
     .section-heading h2 {
       color: var(--wine);
-      font-size: clamp(27px, 4vw, 36px);
-      line-height: 1.25;
-      margin: 8px 0 12px;
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.3;
+      margin-bottom: 10px;
     }
 
     .section-heading p {
+      max-width: 740px;
+      margin: auto;
       color: var(--muted);
-      margin: 0;
     }
 
-    .benefits {
+    .features {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+      margin-bottom: 35px;
     }
 
-    .benefit {
+    .feature {
+      padding: 23px;
       background: white;
       border: 1px solid var(--border);
       border-radius: 13px;
-      padding: 23px;
       text-align: center;
     }
 
-    .benefit-icon {
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      margin: 0 auto 12px;
-      background: var(--pink);
-      font-size: 27px;
+    .feature-icon {
+      font-size: 29px;
+      margin-bottom: 7px;
     }
 
-    .benefit h3 {
+    .feature h3 {
       color: var(--wine);
-      margin: 5px 0;
-      font-size: 18px;
+      font-size: 17px;
+      margin-bottom: 7px;
     }
 
-    .benefit p {
+    .feature p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    .courses-section {
-      background: var(--pink);
-      padding: 55px 0;
-    }
-
-    .courses-inner {
-      width: min(1120px, 92%);
-      margin: auto;
     }
 
     .course-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      align-items: stretch;
+      gap: 22px;
     }
 
-    .course-card {
+    .course {
+      display: flex;
+      flex-direction: column;
       background: white;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 15px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 5px 18px rgba(76,16,37,.05);
+      box-shadow: var(--shadow);
     }
 
-    .course-art {
-      min-height: 150px;
+    .course-top {
+      background: linear-gradient(135deg, #f8e9ed, #fff5e7);
+      padding: 23px;
+      min-height: 135px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .course-icon {
+      width: 62px;
+      height: 62px;
+      flex-shrink: 0;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,.35), transparent 30%),
-        linear-gradient(135deg, var(--wine-dark), var(--wine));
-      color: white;
-      font-size: 58px;
+      border-radius: 50%;
+      background: white;
+      font-size: 30px;
+      border: 1px solid #f0d9df;
     }
 
-    .course-card:nth-child(2) .course-art {
-      background: linear-gradient(135deg, #96705d, #d9b49a);
-    }
-
-    .course-card:nth-child(3) .course-art {
-      background: linear-gradient(135deg, #73512e, #c09a5a);
-    }
-
-    .course-body {
-      padding: 23px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .course-label {
-      color: #94662e;
-      font-size: 12px;
-      font-weight: bold;
+    .course-category {
+      color: var(--wine);
+      font-size: 11px;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    .course-card h3 {
+    .course h3 {
       color: var(--wine);
-      font-size: 21px;
-      line-height: 1.3;
-      margin: 8px 0 10px;
+      font-size: 19px;
+      line-height: 1.35;
+      margin-top: 4px;
     }
 
-    .course-card p {
+    .course-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 22px;
+    }
+
+    .course-body > p {
       color: var(--muted);
-      margin: 0 0 15px;
+      font-size: 14px;
+      margin-bottom: 16px;
     }
 
-    .course-card ul {
-      padding-left: 20px;
-      margin: 0 0 20px;
+    .course h4 {
+      font-size: 14px;
+      margin-bottom: 7px;
       color: var(--text);
+    }
+
+    .course ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .course li {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .course li::before {
+      content: "✓";
+      color: var(--wine);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .course-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    .course-footer p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .course-footer .btn {
+      display: block;
+      width: 100%;
       font-size: 14px;
     }
 
-    .course-card li {
-      margin: 5px 0;
-    }
-
-    .course-card .button {
-      margin-top: auto;
-      width: 100%;
-    }
-
-    .details-section {
-      padding: 55px 0;
-    }
-
-    .detail-list {
-      display: grid;
-      gap: 14px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
+    .process {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    summary {
-      cursor: pointer;
-      padding: 17px 20px;
-      font-weight: bold;
-      color: var(--wine);
-    }
-
-    details[open] summary {
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      background: #fff4f6;
     }
 
-    .detail-content {
-      padding: 16px 20px 20px;
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 18px;
+    }
+
+    .step-number {
+      width: 43px;
+      height: 43px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--wine);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      color: var(--wine);
+      margin-bottom: 7px;
+    }
+
+    .step p {
+      font-size: 13px;
       color: var(--muted);
     }
 
-    .detail-content h4 {
+    .notice {
+      background: #fff5e5;
+      border-left: 4px solid var(--gold);
+      padding: 22px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .notice h3 {
       color: var(--wine);
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
 
-    .detail-content ul {
-      padding-left: 20px;
+    .notice p {
+      font-size: 14px;
+      color: #5e5154;
     }
 
-    .registration-section {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 10px 0 55px;
-    }
-
-    .registration-layout {
+    .contact-panel {
+      background: linear-gradient(135deg, var(--wine-dark), var(--wine));
+      color: white;
+      border-radius: 18px;
+      padding: 36px;
       display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 35px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
       align-items: start;
     }
 
-    .registration-info h2 {
-      color: var(--wine);
-      font-size: 29px;
-      line-height: 1.25;
-      margin-top: 0;
+    .contact-panel h2 {
+      font-size: 27px;
+      line-height: 1.3;
+      margin-bottom: 13px;
     }
 
-    .registration-info p {
-      color: var(--muted);
-    }
-
-    .info-note {
-      background: var(--pink);
-      border-left: 4px solid var(--gold);
-      padding: 14px;
-      border-radius: 5px;
-      color: var(--text);
+    .contact-panel p {
+      color: #f8e8ec;
       font-size: 14px;
+      margin-bottom: 13px;
+    }
+
+    .contact-panel .eyebrow {
+      margin-bottom: 10px;
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
     }
 
     .field {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
     }
 
     .field.full {
@@ -436,108 +436,101 @@
     }
 
     .field label {
-      color: var(--text);
-      font-size: 14px;
-      font-weight: bold;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
     }
 
     .field input,
     .field select,
     .field textarea {
       width: 100%;
-      min-width: 0;
-      padding: 12px;
-      border: 1px solid #d9c8ce;
+      padding: 11px 12px;
+      border: 1px solid #eadde1;
       border-radius: 7px;
-      background: #fffdfc;
+      background: white;
       color: var(--text);
+      outline: none;
     }
 
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
-      outline: 2px solid var(--gold);
-      outline-offset: 1px;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(217,181,109,0.25);
     }
 
     .field textarea {
-      min-height: 95px;
+      min-height: 85px;
       resize: vertical;
     }
 
-    .form-hint {
-      color: var(--muted);
-      font-size: 12px;
-      margin: 12px 0;
-    }
-
-    .submit-button {
-      width: 100%;
+    .form-help {
+      font-size: 12px !important;
       margin-top: 12px;
-      font-size: 15px;
     }
 
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .faq details {
-      margin-bottom: 10px;
-    }
-
-    .contact-band {
-      background: linear-gradient(135deg, var(--wine-dark), var(--wine));
-      color: white;
-      text-align: center;
-      padding: 42px 20px;
-    }
-
-    .contact-band h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    .contact-band p {
-      max-width: 650px;
-      margin: 0 auto 20px;
-      color: #fff1f4;
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--gold);
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     footer {
+      background: #360b1b;
+      color: white;
       text-align: center;
-      background: #350c1b;
-      color: #f8e8ed;
-      padding: 22px 16px;
-      font-size: 14px;
+      padding: 28px 18px;
     }
 
     footer p {
-      margin: 4px 0;
+      font-size: 13px;
+      color: #f4dfe6;
     }
 
-    @media (max-width: 850px) {
-      .course-grid,
-      .benefits {
+    footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .course-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .registration-layout {
+      .features {
         grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 620px) {
       .hero {
-        padding: 54px 18px;
+        padding: 52px 17px;
       }
 
-      .hero p {
-        font-size: 16px;
+      .btn-outline {
+        margin: 10px 0 0;
+      }
+
+      .section {
+        padding: 42px 16px;
       }
 
       .course-grid,
-      .benefits,
+      .contact-panel,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-panel {
+        padding: 24px 18px;
+      }
+
       .form-grid {
         grid-template-columns: 1fr;
       }
@@ -546,477 +539,476 @@
         grid-column: auto;
       }
 
-      .registration-section {
-        padding: 20px;
-      }
-
       nav {
-        gap: 8px 15px;
-      }
-
-      nav a {
-        font-size: 14px;
+        gap: 8px 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="top-line"></div>
+  <div class="topbar">
+    INSTITUT DE BEAUTÉ & FORMATION PROFESSIONNELLE
+  </div>
 
   <header>
-    <p class="brand">LAURY MAKE-UP</p>
-    <p class="brand-subtitle">Institut de beauté &amp; formation professionnelle</p>
+    <a class="brand" href="index.html">LAURY MAKE-UP</a>
+    <p class="tagline">Institut de beauté & formation professionnelle</p>
 
     <nav aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="index.html#prestations">Prestations</a>
-      <a href="formations.html" aria-current="page">Formations</a>
+      <a href="formations.html">Formations</a>
       <a href="boutique.html">Boutique</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="eyebrow">Apprendre · Pratiquer · Progresser</span>
-      <h1>Faites de votre passion pour la beauté une compétence</h1>
-      <p>
-        Découvrez les formations LAURY MAKE-UP pour développer votre savoir-faire
-        en maquillage, en soins du visage et dans l'univers de l'entrepreneuriat beauté.
-      </p>
-
-      <div class="hero-buttons">
-        <a class="button button-gold" href="#catalogue">
-          Découvrir les formations
-        </a>
-        <a class="button button-outline" href="#inscription">
-          Demander une inscription
-        </a>
-      </div>
-    </div>
-  </section>
-
   <main>
-    <section class="content-section">
+    <section class="hero">
+      <p class="eyebrow">Apprendre • Pratiquer • Évoluer</p>
+      <h1>Développez votre talent dans la beauté</h1>
+      <p>
+        Découvrez nos parcours de formation autour du maquillage,
+        des soins esthétiques et de l'entrepreneuriat beauté.
+        Faites évoluer vos compétences avec LAURY MAKE-UP.
+      </p>
+      <a class="btn btn-gold" href="#catalogue">Découvrir les formations</a>
+      <a class="btn btn-outline" href="#inscription">Demander des informations</a>
+    </section>
+
+    <section class="section">
       <div class="section-heading">
-        <span class="eyebrow">Notre approche</span>
-        <h2>Développez votre potentiel</h2>
+        <p class="eyebrow">Votre progression</p>
+        <h2>Une approche centrée sur vos compétences</h2>
         <p>
-          Une présentation claire des domaines de formation pour vous aider
-          à choisir le parcours qui correspond à votre projet.
+          Découvrez les domaines proposés et contactez l'institut
+          pour recevoir le programme, les conditions d'accès et les prochaines dates.
         </p>
       </div>
 
-      <div class="benefits">
-        <article class="benefit">
-          <div class="benefit-icon" aria-hidden="true">💄</div>
-          <h3>Techniques beauté</h3>
-          <p>Découvrez les gestes, les outils et les produits utilisés dans l'univers de la beauté.</p>
+      <div class="features">
+        <article class="feature">
+          <div class="feature-icon">💄</div>
+          <h3>Techniques de beauté</h3>
+          <p>Découvrez les gestes, les outils et les bonnes pratiques du secteur.</p>
         </article>
 
-        <article class="benefit">
-          <div class="benefit-icon" aria-hidden="true">🎓</div>
-          <h3>Progression</h3>
-          <p>Identifiez les compétences à acquérir et les points à approfondir selon votre niveau.</p>
+        <article class="feature">
+          <div class="feature-icon">🎓</div>
+          <h3>Progression accompagnée</h3>
+          <p>Précisez votre niveau et vos objectifs pour identifier le parcours adapté.</p>
         </article>
 
-        <article class="benefit">
-          <div class="benefit-icon" aria-hidden="true">✨</div>
+        <article class="feature">
+          <div class="feature-icon">✨</div>
           <h3>Projet professionnel</h3>
-          <p>Explorez les bases pour développer une activité dans le secteur de la beauté.</p>
+          <p>Développez votre savoir-faire et préparez votre évolution dans la beauté.</p>
         </article>
       </div>
     </section>
-  </main>
 
-  <section class="courses-section" id="catalogue">
-    <div class="courses-inner">
+    <section class="section" id="catalogue">
       <div class="section-heading">
-        <span class="eyebrow">Notre catalogue</span>
+        <p class="eyebrow">Notre catalogue</p>
         <h2>Nos formations beauté</h2>
         <p>
-          Choisissez une formation pour découvrir son contenu et demander
-          des informations sur les prochaines sessions.
+          Choisissez le domaine qui vous intéresse. Les programmes,
+          tarifs, durées et dates sont communiqués par l'institut sur demande.
         </p>
       </div>
 
       <div class="course-grid">
-        <article class="course-card">
-          <div class="course-art" aria-hidden="true">💄</div>
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">💄</div>
+            <div>
+              <p class="course-category">Maquillage</p>
+              <h3>Maquillage professionnel</h3>
+            </div>
+          </div>
           <div class="course-body">
-            <span class="course-label">Techniques de maquillage</span>
-            <h3>Maquillage professionnel</h3>
             <p>
-              Découvrez les bases du maquillage, la préparation de la peau,
-              le choix des produits et les techniques d'application.
+              Découvrez les bases du maquillage, la préparation de la peau
+              et les techniques adaptées aux différentes occasions.
             </p>
+            <h4>Thèmes abordés</h4>
             <ul>
-              <li>Préparation du teint</li>
-              <li>Choix des produits et outils</li>
-              <li>Techniques d'application</li>
+              <li>Préparation et observation de la peau</li>
+              <li>Choix des teintes et des produits</li>
+              <li>Teint, yeux et lèvres</li>
+              <li>Hygiène et entretien du matériel</li>
             </ul>
-            <a class="button button-wine" href="#detail-maquillage">
-              Voir le programme
-            </a>
+            <div class="course-footer">
+              <p>Public : débutantes ou personnes souhaitant progresser.</p>
+              <button class="btn" type="button" data-course="Maquillage professionnel">
+                Demander le programme
+              </button>
+            </div>
           </div>
         </article>
 
-        <article class="course-card">
-          <div class="course-art" aria-hidden="true">🌸</div>
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">🌿</div>
+            <div>
+              <p class="course-category">Soins esthétiques</p>
+              <h3>Soins du visage</h3>
+            </div>
+          </div>
           <div class="course-body">
-            <span class="course-label">Routine et préparation</span>
-            <h3>Soins du visage</h3>
             <p>
-              Découvrez les principes de préparation de la peau, les routines
-              de soins et l'utilisation adaptée des produits.
+              Apprenez à reconnaître les besoins courants de la peau
+              et à comprendre les étapes d'un soin du visage.
             </p>
+            <h4>Thèmes abordés</h4>
             <ul>
-              <li>Étapes d'une routine de soin</li>
-              <li>Hygiène et préparation</li>
-              <li>Choix des produits adaptés</li>
+              <li>Observation des types de peau</li>
+              <li>Nettoyage et préparation</li>
+              <li>Routines et choix des produits</li>
+              <li>Hygiène et précautions de base</li>
             </ul>
-            <a class="button button-wine" href="#detail-soins">
-              Voir le programme
-            </a>
+            <div class="course-footer">
+              <p>Public : personnes intéressées par les soins du visage.</p>
+              <button class="btn" type="button" data-course="Soins du visage">
+                Demander le programme
+              </button>
+            </div>
           </div>
         </article>
 
-        <article class="course-card">
-          <div class="course-art" aria-hidden="true">💼</div>
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">👁️</div>
+            <div>
+              <p class="course-category">Beauté du regard</p>
+              <h3>Mise en beauté du regard</h3>
+            </div>
+          </div>
           <div class="course-body">
-            <span class="course-label">Projet et activité</span>
-            <h3>Beauté et entrepreneuriat</h3>
             <p>
-              Découvrez les bases pour présenter vos prestations,
-              organiser votre activité et accueillir vos clientes.
+              Découvrez les techniques de mise en valeur des yeux
+              et les principes d'harmonie du regard.
             </p>
+            <h4>Thèmes abordés</h4>
             <ul>
-              <li>Présentation des prestations</li>
-              <li>Organisation de l'activité</li>
-              <li>Relation avec la clientèle</li>
+              <li>Formes et harmonie du regard</li>
+              <li>Application des produits adaptés</li>
+              <li>Travail des sourcils et des cils</li>
+              <li>Hygiène et sécurité autour des yeux</li>
             </ul>
-            <a class="button button-wine" href="#detail-entrepreneuriat">
-              Voir le programme
-            </a>
+            <div class="course-footer">
+              <p>Public : débutantes ou professionnelles en perfectionnement.</p>
+              <button class="btn" type="button" data-course="Mise en beauté du regard">
+                Demander le programme
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">💅</div>
+            <div>
+              <p class="course-category">Beauté des mains</p>
+              <h3>Manucure et beauté des ongles</h3>
+            </div>
+          </div>
+          <div class="course-body">
+            <p>
+              Initiez-vous aux gestes essentiels pour prendre soin des mains
+              et réaliser une mise en beauté soignée des ongles.
+            </p>
+            <h4>Thèmes abordés</h4>
+            <ul>
+              <li>Hygiène et préparation des mains</li>
+              <li>Préparation des ongles naturels</li>
+              <li>Application et finition du vernis</li>
+              <li>Entretien du matériel</li>
+            </ul>
+            <div class="course-footer">
+              <p>Public : personnes souhaitant découvrir l'onglerie.</p>
+              <button class="btn" type="button" data-course="Manucure et beauté des ongles">
+                Demander le programme
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">🛍️</div>
+            <div>
+              <p class="course-category">Vente & conseil</p>
+              <h3>Conseil et vente de produits beauté</h3>
+            </div>
+          </div>
+          <div class="course-body">
+            <p>
+              Développez les bases de l'accueil client et apprenez
+              à présenter des produits de beauté avec professionnalisme.
+            </p>
+            <h4>Thèmes abordés</h4>
+            <ul>
+              <li>Accueil et écoute des besoins</li>
+              <li>Présentation des produits</li>
+              <li>Conseil et expérience client</li>
+              <li>Fidélisation et suivi commercial</li>
+            </ul>
+            <div class="course-footer">
+              <p>Public : vendeuses, conseillères et entrepreneuses.</p>
+              <button class="btn" type="button" data-course="Conseil et vente de produits beauté">
+                Demander le programme
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course">
+          <div class="course-top">
+            <div class="course-icon">📈</div>
+            <div>
+              <p class="course-category">Entrepreneuriat</p>
+              <h3>Créer son activité beauté</h3>
+            </div>
+          </div>
+          <div class="course-body">
+            <p>
+              Découvrez les fondamentaux pour organiser une activité beauté,
+              présenter vos prestations et préparer votre offre commerciale.
+            </p>
+            <h4>Thèmes abordés</h4>
+            <ul>
+              <li>Définition de son offre et de sa clientèle</li>
+              <li>Calcul des coûts et réflexion sur les prix</li>
+              <li>Communication et visibilité en ligne</li>
+              <li>Organisation et suivi des clientes</li>
+            </ul>
+            <div class="course-footer">
+              <p>Public : porteuses de projet et professionnelles de la beauté.</p>
+              <button class="btn" type="button" data-course="Créer son activité beauté">
+                Demander le programme
+              </button>
+            </div>
           </div>
         </article>
       </div>
-    </div>
-  </section>
 
-  <main>
-    <section class="details-section" id="programmes">
-      <div class="section-heading">
-        <span class="eyebrow">En savoir plus</span>
-        <h2>Découvrez le contenu des formations</h2>
+      <div class="notice">
+        <h3>Informations importantes</h3>
         <p>
-          Les éléments ci-dessous présentent des thèmes indicatifs.
-          Le programme définitif est à confirmer avec LAURY MAKE-UP.
+          Les formations présentées constituent des domaines de formation proposés
+          à titre informatif. Le contenu définitif, les prérequis, les modalités
+          pratiques, les tarifs, la durée, les dates et la disponibilité doivent
+          être confirmés par LAURY MAKE-UP avant toute inscription.
+          Aucun diplôme ou financement n'est garanti par cette page.
         </p>
-      </div>
-
-      <div class="detail-list">
-        <details id="detail-maquillage">
-          <summary>Formation : Maquillage professionnel</summary>
-          <div class="detail-content">
-            <h4>Objectif indicatif</h4>
-            <p>
-              Découvrir les principales étapes d'une mise en beauté et
-              comprendre l'utilisation des produits et des outils de maquillage.
-            </p>
-            <h4>Thèmes abordés</h4>
-            <ul>
-              <li>Hygiène du matériel et préparation de la peau.</li>
-              <li>Préparation et unification du teint.</li>
-              <li>Travail des yeux et des lèvres.</li>
-              <li>Choix des produits et entretien des outils.</li>
-            </ul>
-            <p><strong>Durée, tarif, niveau et dates :</strong> à confirmer auprès de l'institut.</p>
-            <button class="button button-wine choose-course" type="button" data-course="Maquillage professionnel">
-              Demander des informations
-            </button>
-          </div>
-        </details>
-
-        <details id="detail-soins">
-          <summary>Formation : Soins du visage</summary>
-          <div class="detail-content">
-            <h4>Objectif indicatif</h4>
-            <p>
-              Comprendre les étapes d'une routine de soin et les principes
-              d'hygiène nécessaires à la préparation de la peau.
-            </p>
-            <h4>Thèmes abordés</h4>
-            <ul>
-              <li>Nettoyage et préparation de la peau.</li>
-              <li>Présentation des étapes d'une routine.</li>
-              <li>Utilisation et précautions liées aux produits cosmétiques.</li>
-              <li>Hygiène du poste de travail et du matériel.</li>
-            </ul>
-            <p><strong>Durée, tarif, niveau et dates :</strong> à confirmer auprès de l'institut.</p>
-            <button class="button button-wine choose-course" type="button" data-course="Soins du visage">
-              Demander des informations
-            </button>
-          </div>
-        </details>
-
-        <details id="detail-entrepreneuriat">
-          <summary>Formation : Beauté et entrepreneuriat</summary>
-          <div class="detail-content">
-            <h4>Objectif indicatif</h4>
-            <p>
-              Découvrir les bases de l'organisation et de la présentation
-              d'une activité de prestations beauté.
-            </p>
-            <h4>Thèmes abordés</h4>
-            <ul>
-              <li>Présentation de ses services.</li>
-              <li>Accueil et relation avec la clientèle.</li>
-              <li>Organisation des rendez-vous.</li>
-              <li>Communication et promotion de son activité.</li>
-            </ul>
-            <p><strong>Durée, tarif, niveau et dates :</strong> à confirmer auprès de l'institut.</p>
-            <button class="button button-wine choose-course" type="button" data-course="Beauté et entrepreneuriat">
-              Demander des informations
-            </button>
-          </div>
-        </details>
       </div>
     </section>
 
-    <section class="registration-section" id="inscription">
-      <div class="registration-layout">
-        <div class="registration-info">
-          <span class="eyebrow">Votre projet commence ici</span>
-          <h2>Demandez votre inscription</h2>
-          <p>
-            Remplissez le formulaire pour envoyer une demande à LAURY MAKE-UP.
-            L'institut pourra ensuite vous renseigner sur le programme,
-            les tarifs, les dates et les modalités.
-          </p>
-
-          <div class="info-note">
-            <strong>À savoir :</strong> l'envoi du formulaire constitue une
-            demande de renseignements ou d'inscription. La place n'est pas
-            réservée tant que l'institut n'a pas confirmé les modalités.
-          </div>
+    <section class="process">
+      <div class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Comment procéder ?</p>
+          <h2>Votre demande en quatre étapes</h2>
         </div>
 
-        <form id="registration-form">
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">1</div>
+            <h3>Choisissez</h3>
+            <p>Sélectionnez la formation qui correspond à votre projet.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">2</div>
+            <h3>Contactez-nous</h3>
+            <p>Envoyez votre demande d'informations par WhatsApp.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">3</div>
+            <h3>Échangez</h3>
+            <p>Recevez les informations disponibles et posez vos questions.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">4</div>
+            <h3>Confirmez</h3>
+            <p>Validez les conditions et les modalités directement auprès de l'institut.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inscription">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">Parlons de votre projet</p>
+          <h2>Recevez des informations sur votre formation</h2>
+          <p>
+            Remplissez ce formulaire pour préparer votre demande.
+            WhatsApp s'ouvrira avec votre message afin que vous puissiez
+            le vérifier et l'envoyer à LAURY MAKE-UP.
+          </p>
+          <p><strong>WhatsApp :</strong> +235 63 01 13 42</p>
+          <p>
+            La demande ne vaut pas inscription définitive.
+            L'institut vous confirmera les disponibilités et les conditions.
+          </p>
+          <a class="whatsapp-link"
+             href="https://wa.me/23563011342"
+             target="_blank"
+             rel="noopener">
+            Écrire directement sur WhatsApp
+          </a>
+        </div>
+
+        <form id="trainingForm">
           <div class="form-grid">
-            <div class="field">
-              <label for="full-name">Nom complet *</label>
-              <input
-                id="full-name"
-                name="full-name"
-                type="text"
-                autocomplete="name"
-                placeholder="Votre nom"
-                required
-              >
-            </div>
-
-            <div class="field">
-              <label for="phone">Téléphone / WhatsApp *</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                autocomplete="tel"
-                placeholder="Votre numéro"
-                required
-              >
-            </div>
-
             <div class="field full">
-              <label for="email">Adresse e-mail (facultatif)</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="exemple@email.com"
-              >
+              <label for="name">Nom complet *</label>
+              <input id="name" name="name" autocomplete="name" required
+                     placeholder="Votre nom et prénom">
+            </div>
+
+            <div class="field">
+              <label for="phone">Téléphone *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel"
+                     required placeholder="Votre numéro">
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail (facultatif)</label>
+              <input id="email" name="email" type="email" autocomplete="email"
+                     placeholder="nom@exemple.com">
             </div>
 
             <div class="field full">
               <label for="course">Formation souhaitée *</label>
               <select id="course" name="course" required>
                 <option value="">Choisissez une formation</option>
-                <option value="Maquillage professionnel">Maquillage professionnel</option>
-                <option value="Soins du visage">Soins du visage</option>
-                <option value="Beauté et entrepreneuriat">Beauté et entrepreneuriat</option>
+                <option>Maquillage professionnel</option>
+                <option>Soins du visage</option>
+                <option>Mise en beauté du regard</option>
+                <option>Manucure et beauté des ongles</option>
+                <option>Conseil et vente de produits beauté</option>
+                <option>Créer son activité beauté</option>
+                <option>Autre demande</option>
               </select>
             </div>
 
             <div class="field">
               <label for="level">Votre niveau</label>
               <select id="level" name="level">
-                <option value="Débutant(e)">Débutant(e)</option>
-                <option value="Quelques connaissances">Quelques connaissances</option>
-                <option value="Perfectionnement">Perfectionnement</option>
+                <option>Débutant</option>
+                <option>Intermédiaire</option>
+                <option>Professionnel</option>
+                <option>À déterminer</option>
               </select>
             </div>
 
             <div class="field">
               <label for="format">Modalité souhaitée</label>
               <select id="format" name="format">
-                <option value="À discuter">À discuter</option>
-                <option value="Présentiel">Présentiel</option>
-                <option value="En ligne">En ligne</option>
+                <option>À discuter</option>
+                <option>Présentiel</option>
+                <option>À distance</option>
+                <option>Format mixte</option>
               </select>
             </div>
 
             <div class="field full">
-              <label for="availability">Disponibilités souhaitées</label>
-              <input
-                id="availability"
-                name="availability"
-                type="text"
-                placeholder="Ex. : week-end, matin, date souhaitée..."
-              >
+              <label for="availability">Disponibilités (facultatif)</label>
+              <input id="availability" name="availability"
+                     placeholder="Ex. : week-end, en semaine...">
             </div>
 
             <div class="field full">
-              <label for="message">Votre message (facultatif)</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Posez vos questions ou précisez votre projet."
-              ></textarea>
+              <label for="note">Votre message (facultatif)</label>
+              <textarea id="note" name="note"
+                        placeholder="Précisez vos objectifs ou vos questions."></textarea>
+            </div>
+
+            <div class="field full">
+              <button class="btn btn-gold" type="submit">
+                Envoyer ma demande sur WhatsApp
+              </button>
             </div>
           </div>
-
-          <p class="form-hint">
-            Les informations saisies seront incluses dans le message WhatsApp
-            que vous pourrez vérifier avant de l'envoyer.
+          <p class="form-help">
+            Vos informations seront incluses dans le message WhatsApp que vous
+            pourrez vérifier avant de l'envoyer.
           </p>
-
-          <button class="button button-green submit-button" type="submit">
-            Envoyer ma demande sur WhatsApp
-          </button>
         </form>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-heading">
-        <span class="eyebrow">Questions fréquentes</span>
-        <h2>Avant de vous inscrire</h2>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>Quels sont les tarifs des formations ?</summary>
-          <div class="detail-content">
-            Les tarifs doivent être confirmés directement auprès de LAURY MAKE-UP.
-            Vous pouvez envoyer une demande depuis le formulaire ci-dessus.
-          </div>
-        </details>
-
-        <details>
-          <summary>Quelle est la durée d'une formation ?</summary>
-          <div class="detail-content">
-            La durée dépend du programme et des modalités proposées par l'institut.
-            Demandez les dates et la durée avant de vous inscrire.
-          </div>
-        </details>
-
-        <details>
-          <summary>Un certificat est-il délivré ?</summary>
-          <div class="detail-content">
-            Les modalités de certification doivent être confirmées par l'institut
-            pour la formation choisie. Aucun certificat n'est garanti par cette page.
-          </div>
-        </details>
-
-        <details>
-          <summary>Comment confirmer mon inscription ?</summary>
-          <div class="detail-content">
-            Envoyez votre demande par WhatsApp, puis attendez la réponse de
-            LAURY MAKE-UP concernant les disponibilités, les tarifs et les modalités.
-          </div>
-        </details>
       </div>
     </section>
   </main>
 
-  <section class="contact-band">
-    <h2>Prête à développer vos compétences ?</h2>
-    <p>
-      Contactez LAURY MAKE-UP pour poser vos questions et préparer
-      votre parcours dans l'univers de la beauté.
-    </p>
-    <a class="button button-gold" href="#inscription">
-      Parler de mon projet
-    </a>
-  </section>
-
   <footer>
-    <p><strong>LAURY MAKE-UP</strong> — Institut de beauté &amp; formation professionnelle</p>
+    <p><strong>LAURY MAKE-UP</strong> — Institut de beauté & formation professionnelle</p>
+    <p>WhatsApp : <a href="https://wa.me/23563011342">+235 63 01 13 42</a></p>
     <p>© <span id="year"></span> LAURY MAKE-UP — Tous droits réservés.</p>
   </footer>
 
   <script>
-    // Numéro WhatsApp officiel de LAURY MAKE-UP.
-    // Format international : indicatif du pays et numéro, sans + ni espaces.
     const WHATSAPP_NUMBER = "23563011342";
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    function openWhatsApp(message) {
+      const url =
+        "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(message);
 
-    // Les boutons des programmes sélectionnent la formation dans le formulaire.
-    document.querySelectorAll(".choose-course").forEach((button) => {
-      button.addEventListener("click", () => {
-        const courseSelect = document.getElementById("course");
-        courseSelect.value = button.dataset.course;
+      window.location.href = url;
+    }
 
+    document.querySelectorAll("[data-course]").forEach(function(button) {
+      button.addEventListener("click", function() {
+        const course = button.getAttribute("data-course");
+        document.getElementById("course").value = course;
         document.getElementById("inscription").scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+          behavior: "smooth"
         });
       });
     });
 
-    document.getElementById("registration-form").addEventListener("submit", (event) => {
+    document.getElementById("trainingForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      const name = document.getElementById("full-name").value.trim();
+      const name = document.getElementById("name").value.trim();
       const phone = document.getElementById("phone").value.trim();
       const email = document.getElementById("email").value.trim();
       const course = document.getElementById("course").value;
       const level = document.getElementById("level").value;
       const format = document.getElementById("format").value;
       const availability = document.getElementById("availability").value.trim();
-      const note = document.getElementById("message").value.trim();
+      const note = document.getElementById("note").value.trim();
 
       if (!name || !phone || !course) {
-        alert("Veuillez renseigner votre nom, votre téléphone et la formation souhaitée.");
+        alert("Veuillez remplir votre nom, votre téléphone et la formation souhaitée.");
         return;
       }
 
       const lines = [
-        "Bonjour LAURY MAKE-UP, je souhaite obtenir des renseignements sur une formation.",
+        "Bonjour LAURY MAKE-UP, je souhaite recevoir des informations sur une formation.",
         "",
         "DEMANDE DE FORMATION",
-        `Nom complet : ${name}`,
-        `Téléphone : ${phone}`,
-        email ? `E-mail : ${email}` : "",
-        `Formation souhaitée : ${course}`,
-        `Niveau : ${level}`,
-        `Modalité souhaitée : ${format}`,
-        availability ? `Disponibilités : ${availability}` : "",
-        note ? `Message : ${note}` : "",
+        "Nom complet : " + name,
+        "Téléphone : " + phone,
+        email ? "E-mail : " + email : "",
+        "Formation souhaitée : " + course,
+        "Niveau : " + level,
+        "Modalité souhaitée : " + format,
+        availability ? "Disponibilités : " + availability : "",
+        note ? "Message : " + note : "",
         "",
         "Merci de me communiquer le programme, le tarif, la durée, les prochaines dates et les modalités d'inscription."
       ].filter(Boolean);
 
-      const message = lines.join("\n");
-      const whatsappUrl =
-        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-      window.location.href = whatsappUrl;
+      openWhatsApp(lines.join("\n"));
     });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
